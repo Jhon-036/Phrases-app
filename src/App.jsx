@@ -13,13 +13,14 @@ function App() {
   const [quote, setQuote] = useState(getRandonElement(quotes))
   //estado aleatorio de los backgound 
   const [currentBg, setCurrentBg] = useState(getRandonElement(bgs))
+  //estado aleatorio de las planetas
 
   //funcion onclick del btn
   const handleChangeQuote = () => {
     setQuote(getRandonElement(quotes))
-    setCurrentBg(getRandonElement(bgs))
+    setCurrentBg(getRandonElement(bgs)) 
   }
-  
+
   return (
     <main className={`App ${currentBg}`}>
       <QuoteBox quote={quote} handleChangeQuote={handleChangeQuote}/>

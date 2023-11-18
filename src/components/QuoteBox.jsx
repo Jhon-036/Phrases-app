@@ -12,8 +12,12 @@ const QuoteBox = ({ quote, handleChangeQuote }) => {
             <button className="quoteBox__btn" onClick={handleChangeQuote}>
                 <img src="/btn.svg" alt="" />
             </button>
+            <div className='quoteBox__planet'>
+                <img src='/planeta1.svg' alt="" />
+            </div>
             <span className="quoteBox__author">{author}</span>
         </article>
     )
 }
+
 export default QuoteBox
