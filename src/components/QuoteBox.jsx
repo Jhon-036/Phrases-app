@@ -10,7 +10,7 @@ const QuoteBox = ({ quote, handleChangeQuote }) => {
                 <p>{phrase}</p>
             </div>
             <button className="quoteBox__btn" onClick={handleChangeQuote}>
-                <img src="./pub" alt="" />
+                <img src="/btn.svg" alt="" />
             </button>
             <span className="quoteBox__author">{author}</span>
         </article>
