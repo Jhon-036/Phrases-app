@@ -2,28 +2,28 @@ import { useState } from 'react';
 import './App.css'
 import QuoteBox from './components/QuoteBox';
 import quotes from './db/quotes.json'
-import { getRandonElement } from './utils/random';
+import { getRandomElement } from './utils/random';
 
-//Arrays de backgounds
 const bgs = ['bg1', 'bg2', 'bg3', 'bg4']
+const planets = ['planet1', 'planet2', 'planet3', 'planet4']
 
 function App() {
+  
+  const [quote, setQuote] = useState(getRandomElement(quotes))
+  const [currentBg, setCurrentBg] = useState(getRandomElement(bgs))
+  const [currentPlanet, setCurrentPlanet] = useState(getRandomElement(planets))
+  
 
-  //estado aleatorio de las fraces 
-  const [quote, setQuote] = useState(getRandonElement(quotes))
-  //estado aleatorio de los backgound 
-  const [currentBg, setCurrentBg] = useState(getRandonElement(bgs))
-  //estado aleatorio de las planetas
-
-  //funcion onclick del btn
   const handleChangeQuote = () => {
-    setQuote(getRandonElement(quotes))
-    setCurrentBg(getRandonElement(bgs)) 
+    setQuote(getRandomElement(quotes))
+    setCurrentBg(getRandomElement(bgs))
+    setCurrentPlanet(getRandomElement(planets))
   }
+  console.log(quote);
 
   return (
     <main className={`App ${currentBg}`}>
-      <QuoteBox quote={quote} handleChangeQuote={handleChangeQuote}/>
+       <QuoteBox quote={quote} handleChangeQuote={handleChangeQuote} currentPlanet={currentPlanet}/>
     </main>
   )
 }

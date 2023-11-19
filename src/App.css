@@ -1,28 +1,29 @@
-@import url('https://fonts.cdnfonts.com/css/ds-digital');
-
 .App {
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    color: white;
+    padding: 20px;
     background-size: cover;
-    font-family: 'DS-Digital', sans-serif;
+    overflow: hidden;
+    position: relative;
 }
 
 .bg1 {
-    background-image: url(/images/universe1.webp);
+    background-image: url(/images/bg1.webp);
 }
 
 .bg2 {
-    background-image: url(/images/universe2.webp);
+    background-image: url(/images/bg2.webp);
 }
 
 .bg3 {
-    background-image: url(/images/universe3.webp);
+    background-image: url(/images/bg3.webp);
 }
 
 .bg4 {
-    background-image: url(/images/universe4.webp);
+    background-image: url(/images/bg4.webp);
 }
+
+
